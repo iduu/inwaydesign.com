@@ -1,0 +1,80 @@
+$content-default-size : 940px;
+$page-default-size    : 1000px;
+
+/*	MAIN CONTAINER
+	Set the width to whatever you want the width of your site to be. */
+.container {
+	max-width : $content-default-size;
+	margin    : 0 auto;
+}
+
+/* 	DEFAULT ROW STYLES
+	Set bottom padding according to preference */
+.row { padding-bottom: 0em; }
+
+
+/* DEFAULT COLUMN STYLES */
+.col {
+	display : block;
+	float   : left;
+	width   : 100%;
+}
+
+.span_1  { width : 8.33333333333%; }
+.span_2  { width : 16.6666666667%; }
+.span_3  { width : 25%; }
+.span_4  { width : 33.3333333333%; }
+.span_5  { width : 41.6666666667%; }
+.span_6  { width : 50%; }
+.span_7  { width : 58.3333333333%; }
+.span_8  { width : 66.6666666667%; }
+.span_9  { width : 75%; }
+.span_10 { width : 83.3333333333%; }
+.span_11 { width : 91.6666666667%; }
+.span_12 { width : 100%; }
+
+
+// Default grid in 960px layout
+$gutter-size : 2%;
+$span-size   : (100% - $gutter-size * 11) / 12; // 6.5%
+
+.gutters {
+	.col {
+		margin-left: $gutter-size;
+	}
+	.col:first-child {
+		margin-left: 0;
+	}
+
+	.center .col {
+		margin-left  : auto;
+		margin-right : auto;
+		float        : none;
+	}
+
+	.span_1  { width : $span-size * 1 + $gutter-size * 0;  }
+	.span_2  { width : $span-size * 2 + $gutter-size * 1;  }
+	.span_3  { width : $span-size * 3 + $gutter-size * 2;  }
+	.span_4  { width : $span-size * 4 + $gutter-size * 3;  }
+	.span_5  { width : $span-size * 5 + $gutter-size * 4;  }
+	.span_6  { width : $span-size * 6 + $gutter-size * 5;  }
+	.span_7  { width : $span-size * 7 + $gutter-size * 6;  }
+	.span_8  { width : $span-size * 8 + $gutter-size * 7;  }
+	.span_9  { width : $span-size * 9 + $gutter-size * 8;  }
+	.span_10 { width : $span-size * 10+ $gutter-size * 9;  }
+	.span_11 { width : $span-size * 11+ $gutter-size * 10; }
+	.span_12 { width : 100%; }
+
+	.span_ml_1  { margin-left : $span-size * 1 + $gutter-size * 1;  }
+
+	.span_ml_2  { margin-left : $span-size * 2 + $gutter-size * 1;  }
+	.span_ml_3  { margin-left : $span-size * 3 + $gutter-size * 2;  }
+	.span_ml_4  { margin-left : $span-size * 4 + $gutter-size * 3;  }
+	.span_ml_5  { margin-left : $span-size * 5 + $gutter-size * 4;  }
+
+	.span_mr_1  { margin-right: $span-size * 1 + $gutter-size * 1;  }
+
+	.span_pl_1  { padding-left : $span-size * 1 + $gutter-size * 1;  }
+
+	.span_pr_1  { padding-right: $span-size * 1 + $gutter-size * 1;  }
+}
